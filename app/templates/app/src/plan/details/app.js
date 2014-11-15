@@ -4,25 +4,25 @@
 
 /**
  * @ngdoc module
- * @name sample-app.plan.details.controllers
- * @requires rc
+ * @name <%= appname %>.plan.details.controllers
+ * @requires 
  * @description
- * # sample-app.plan.details.controllers
+ * # <%= appname %>.plan.details.controllers
  *
  * Plan details controller module.
  */
  angular
-  .module('sample-app.plan.details.controllers',[]);
+  .module('<%= appname %>.plan.details.controllers',[]);
 
 /**
  * @ngdoc overview
- * @name sample-app.plan.details
- * @requires sample-app.plan.details.controllers
+ * @name <%= appname %>.plan.details
+ * @requires <%= appname %>.plan.details.controllers
  * @description
- * # sample-app.plan.details
+ * # <%= appname %>.plan.details
  *
  * Plan details module.
  */
  angular
-  .module('sample-app.plan.details', ['sample-app.plan.details.controllers']);
+  .module('<%= appname %>.plan.details', ['<%= appname %>.plan.details.controllers']);
 })();

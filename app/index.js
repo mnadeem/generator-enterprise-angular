@@ -2,14 +2,15 @@
 var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
-var yosay = require('yosay');
 var chalk = require('chalk');
+var fs = require('fs');
 
 var Generator = module.exports = function Generator(args, options) {
   yeoman.generators.Base.apply(this, arguments);
   this.argument('appname', { type: String, required: false });
   this.appname = this.appname || path.basename(process.cwd());
-  this.appname = this._.camelize(this._.slugify(this._.humanize(this.appname)));
+  //this.appname = this._.camelize(this._.slugify(this._.humanize(this.appname)));
+
   this.pkg = yeoman.file.readJSON(path.join(__dirname, '../package.json'));
 };
 
@@ -17,7 +18,6 @@ util.inherits(Generator, yeoman.generators.Base);
 
 Generator.prototype.welcome = function welcome() {
   if (!this.options['skip-welcome-message']) {
-    this.log(yosay());
     this.log(
       chalk.magenta(
         'Out of the box I include Bootstrap and some AngularJS recommended modules.' +
@@ -39,6 +39,7 @@ Generator.prototype.askRequiredData = function askRequiredData() {
 
   this.prompt(prompts, function (props) {
 	this.sname = props.sname;
+	this.appname = this.sname + '-' + this.appname
     done();
   }.bind(this));
 };
@@ -56,7 +57,8 @@ Generator.prototype.startWriting = function startWriting() {
 	  this.mkdir('app/images');
 	  this.mkdir('app/styles');
 	  this.mkdir('app/src');
-	  
+
+
 	  this.createScriptFolders();
 	};
 	this.createScriptFolders  =  function() {
@@ -66,6 +68,9 @@ Generator.prototype.startWriting = function startWriting() {
 	  this.mkdir('app/src/plan');
 	  this.mkdir('app/src/plan/details');
 	  this.mkdir('app/src/plan/summary');
+	  
+	  this.mkdir('build');
+	  this.mkdir('build/config');
 	};
 	this.copyProjectFiles  = function () {
       this.copy('bowerrc', '.bowerrc');
@@ -102,8 +107,35 @@ Generator.prototype.startWriting = function startWriting() {
 	  this.template('app/src/plan/summary/main.tpl.html');
     };
 	this.copyBuildFiles  = function () {
-      this.bulkDirectory('build', 'build');
+      //this.bulkDirectory('build', 'build');
+	  this.copy('build/config/aliases.yaml');
+	  this.copy('build/config/appConfig.js');
+	  this.copy('build/config/autoprefixer.js');
+	  this.copy('build/config/buildConfig.js');
+	  this.copy('build/config/clean.js');
+	  this.copy('build/config/codepainter.js');
+	  this.copy('build/config/complexity.js');
+	  this.copy('build/config/concurrent.js');
+	  this.copy('build/config/connect.js');
+	  this.copy('build/config/copy.js');
+	  this.copy('build/config/eslint.js');
+	  this.copy('build/config/filerev.js');
+	  this.copy('build/config/html2js.js');
+	  this.copy('build/config/htmlmin.js');
+	  this.copy('build/config/imagemin.js');
+	  this.copy('build/config/jscpd.js');
+	  this.copy('build/config/jshint.js');
+	  this.copy('build/config/karma.js');
+	  this.copy('build/config/ngAnnotate.js');
+	  this.copy('build/config/plato.js');
+	  this.copy('build/config/svgmin.js');
+	  this.copy('build/config/usemin.js');
+	  this.copy('build/config/useminPrepare.js');
+	  this.copy('build/config/watch.js');
+	  this.copy('build/config/wiredep.js');
+	  
     };
+
 	this.copyTestFiles  = function () {
       this.bulkDirectory('test', 'test');
     };
@@ -114,6 +146,6 @@ Generator.prototype.startWriting = function startWriting() {
 };
 
 Generator.prototype.postProcess = function postProcess() {
-	this.log('Going to instal dependecies.....');
-	this.installDependencies();
+	this.log('Going to instal dependecies.....' + this.appname);
+	//this.installDependencies();
 };

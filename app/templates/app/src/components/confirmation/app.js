@@ -4,37 +4,37 @@
  
  /**
  * @ngdoc module
- * @name sample-app.components.confirmation.directives
+ * @name <%= appname %>.components.confirmation.directives
  * @description
- * # sample-app.components.confirmation.directives
+ * # <%= appname %>.components.confirmation.directives
  *
- * sample-app.components.confirmation.directives module of the application.
+ * <%= appname %>.components.confirmation.directives module of the application.
  */
  angular
-	.module('sample-app.components.confirmation.directives',['ui.bootstrap']);
+	.module('<%= appname %>.components.confirmation.directives',['ui.bootstrap']);
  
  /**
   * @ngdoc module
-  * @name sample-app.components.confirmation.controllers
+  * @name <%= appname %>.components.confirmation.controllers
   * @description
-  * # sample-app.components.confirmation.controllers
+  * # <%= appname %>.components.confirmation.controllers
   *
-  * sample-app.components.confirmation.controllers module of the application.
+  * <%= appname %>.components.confirmation.controllers module of the application.
   */
   angular
- 	.module('sample-app.components.confirmation.controllers',[]);
+ 	.module('<%= appname %>.components.confirmation.controllers',[]);
  
  /**
  * @ngdoc module
- * @name sample-app.components.confirmation
+ * @name <%= appname %>.components.confirmation
  * @description
- * # sample-app.components.confirmation
+ * # <%= appname %>.components.confirmation
  *
- * sample-app.components.confirmation module of the application.
+ * <%= appname %>.components.confirmation module of the application.
  */
  angular
-	.module('sample-app.components.confirmation', [
-	'sample-app.components.confirmation.directives',
-	'sample-app.components.confirmation.controllers'
+	.module('<%= appname %>.components.confirmation', [
+	'<%= appname %>.components.confirmation.directives',
+	'<%= appname %>.components.confirmation.controllers'
 	]);
 })();

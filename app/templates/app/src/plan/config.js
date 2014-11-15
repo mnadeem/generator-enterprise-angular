@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name sample-app
+ * @name <%= appname %>
  * @requires $stateProvider
  * @description
  *
- * Configures the @module sample-app $stateProvider
+ * Configures the @module <%= appname %> $stateProvider
  */
 angular
-  .module('sample-app.plan')
+  .module('<%= appname %>.plan')
 	.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 		
 		// For any unmatched url, redirect to /plan

@@ -4,15 +4,15 @@
  
  /**
  * @ngdoc module
- * @name sample-app.components
- * @requires sample-app.components.navigation, sample-app.components.confirmation
+ * @name <%= appname %>.components
+ * @requires <%= appname %>.components.navigation, <%= appname %>.components.confirmation
  * @description
- * # sample-app.components
+ * # <%= appname %>.components
  *
  * Main module for components
  */
  angular
-	.module('sample-app.components', [
-	'sample-app.components.confirmation'
+	.module('<%= appname %>.components', [
+	'<%= appname %>.components.confirmation'
 	]);
 })();

@@ -1,7 +1,7 @@
 module.exports = {
   options: {
     base: 'app',
-    module: 'sample-app-templates',
+    module: 'app-templates',
     singleModule: true,
     useStrict: true,
     htmlmin: {

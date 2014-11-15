@@ -3,17 +3,17 @@
 (function(){
 /**
  * @ngdoc module
- * @name sample-app.app
- * @requires sample-app.components, sample-app.plan.details, ui.router
+ * @name <%= appname %>.app
+ * @requires <%= appname %>.components, <%= appname %>.plan.details, ui.router
  * @description
- * # sample-app.app
+ * # <%= appname %>.app
  *
  * Main module of the application.
  */
  angular
-  .module('sample-app.plan', [
-	'sample-app.components',
-	'sample-app.plan.details',
+  .module('<%= appname %>.plan', [
+	'<%= appname %>.components',
+	'<%= appname %>.plan.details',
 	'ui.router'
   ]);
 })();

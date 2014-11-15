@@ -1,18 +1,18 @@
 'use strict';
 
-angular.module('sample-app')
+angular.module('<%= appname %>')
   .constant('APP_HOME_URL', '/xyz/app');
 
 /**
  * @ngdoc overview
- * @name sample-app
+ * @name <%= appname %>
  * @requires $httpProvider
  * @description
  *
- * Configures the @module sample-app $httpProvider to disable IE caching
+ * Configures the @module <%= appname %> $httpProvider to disable IE caching
  */
 angular
-  .module('sample-app')
+  .module('<%= appname %>')
   .config(['$httpProvider', '$httpProvider', function($httpProvider) {
     //initialize get if not there
     if (!$httpProvider.defaults.headers.get) {

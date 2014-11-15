@@ -2,7 +2,7 @@
 
 /**
  * @ngdoc directive
- * @module sample-app.components.confirmation.directives
+ * @module <%= appname %>.components.confirmation.directives
  * @name ngReallyClick
  * @restrict A
  * @scope Isolated
@@ -11,7 +11,7 @@
  * Directive to get user confirmation
  */
 
-angular.module('sample-app.components.confirmation.directives')
+angular.module('<%= appname %>.components.confirmation.directives')
 	.directive('ngReallyClick',['$log', '$modal', '$parse', function factory($log, $modal, $parse) {
 		var directiveDefinitionObject = {
 				restrict: 'A',
