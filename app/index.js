@@ -28,7 +28,7 @@ Generator.prototype.welcome = function welcome() {
 };
 
 Generator.prototype.askRequiredData = function askRequiredData() {
-  this.log('askRequiredData.....');
+  this.log('Going to Prompt for required data.....');
   var done = this.async();
 
   var prompts = [{
@@ -45,7 +45,7 @@ Generator.prototype.askRequiredData = function askRequiredData() {
 
 Generator.prototype.startWriting = function startWriting() {
 	this.app  = function () {
-      this.log('app.....');
+      this.log('Creating app related files.....');
 	  this.createFolders();
 	  this.copyMetaFiles();
     };
@@ -55,8 +55,6 @@ Generator.prototype.startWriting = function startWriting() {
 	  this.mkdir('app/images');
 	  this.mkdir('app/styles');
 	  this.mkdir('app/src');
-
-	  this.mkdir('test');
 	};
 	this.copyProjectFiles  = function () {
       this.copy('bowerrc', '.bowerrc');
@@ -69,15 +67,19 @@ Generator.prototype.startWriting = function startWriting() {
 	  this.template('_bower.json', 'bower.json');
 	  this.copy('_Gruntfile.js', 'Gruntfile.js');
     };
-	this.buildFiles  = function () {
-      this.log('buildFiles.....');
+	this.copyBuildFiles  = function () {
+      this.bulkDirectory('build', 'build');
+    };
+	this.copyTestFiles  = function () {
+      this.bulkDirectory('test', 'test');
     };
 	this.app();
 	this.copyProjectFiles();
-	this.buildFiles();
+	this.copyBuildFiles();
+	this.copyTestFiles();
 };
 
 Generator.prototype.postProcess = function postProcess() {
-	this.log('postProcess.....');
+	this.log('Going to instal dependecies.....');
 	this.installDependencies();
 };

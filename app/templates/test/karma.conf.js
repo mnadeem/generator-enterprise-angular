@@ -8,7 +8,7 @@ module.exports = function(config) {
 
   config.set({
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: true,
+    autoWatch: false,
 
     // base path, that will be used to resolve files and exclude
     basePath: '../',
@@ -34,7 +34,10 @@ module.exports = function(config) {
     exclude: [],
 
     // web server port
-    port: 8080,
+    port: 9876,
+
+    // cli runner port
+    runnerPort: 9100,
 
     // Start these browsers, currently available:
     // - Chrome
@@ -62,19 +65,29 @@ module.exports = function(config) {
     // if true, it capture browsers, run tests and exit
     singleRun: true,
 
-	reporters: ['progress', 'coverage'],
+	reporters: ['dots','junit', 'coverage'],
     preprocessors: { 'app/src/**/*.js': ['coverage'] },
-
+    // junit report config
+    junitReporter:
+    {
+        outputFile: 'reports/junit/test-results.xml'
+    },
 	coverageReporter: {
-      type : 'html',
-      dir : 'reports/coverage/'
+      type : 'cobertura',
+      dir : 'reports/coverage'
     },
 
-    colors: true,
+    colors: false,
 
     // level of logging
     // possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
-    logLevel: config.LOG_INFO,
+    logLevel: config.LOG_DEBUG,
+
+    // If browser does not capture in given timeout [ms], kill it
+    captureTimeout: 60000,
+
+    // report slow unit tests (half second is our cutoff?)
+    reportSlowerThan: 500,
 
     // Uncomment the following lines if you are using grunt's server to run the tests
     // proxies: {
