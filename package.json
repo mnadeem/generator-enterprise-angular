@@ -32,8 +32,7 @@
     "yosay": "^0.3.0"
   },
   "devDependencies": {
-    "mocha": "*",
-    "wrench": "^1.5.8"
+    "mocha": "*"
   },
   "peerDependencies": {
     "yo": ">=1.0.0"
