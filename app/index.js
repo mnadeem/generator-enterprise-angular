@@ -147,5 +147,5 @@ Generator.prototype.startWriting = function startWriting() {
 
 Generator.prototype.postProcess = function postProcess() {
 	this.log('Going to instal dependecies.....' + this.appname);
-	//this.installDependencies();
+	this.installDependencies();
 };
