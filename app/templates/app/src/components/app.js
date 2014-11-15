@@ -13,7 +13,6 @@
  */
  angular
 	.module('sample-app.components', [
-	'sample-app.components.navigation',
 	'sample-app.components.confirmation'
 	]);
 })();
