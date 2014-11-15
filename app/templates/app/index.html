@@ -1,0 +1,93 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Sample App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+	<link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+
+    <!-- endbuild -->
+  </head>
+  <!--[if lt IE 7]>
+  <body class="no-js lt-ie9 lt-ie8 lt-ie7" ng-app="sample-app" ng-strict-di> <![endif]-->
+  <!--[if IE 7]>
+  <body class="no-js lt-ie9 lt-ie8" ng-app="sample-app" ng-strict-di> <![endif]-->
+  <!--[if IE 8]>
+  <body class="no-js lt-ie9" ng-app="sample-app" ng-strict-di> <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <body ng-app="sample-app" ng-strict-di><!--<![endif]-->
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+	<!-- Add your site or application content here -->
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a ng-href="#">Home</a></li>
+          <li><a ng-href="#/about">About</a></li>
+          <li><a ng-href="#">Contact</a></li>
+        </ul>
+        <h3 class="text-muted">sampleApp</h3>
+       
+      </div>
+
+      <div ui-view></div>
+
+      <div class="footer">
+        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+      </div>
+    </div>
+
+    <!-- build:js(.) scripts/oldieshim.js -->
+    <!--[if lt IE 9]>
+    <script src="vendor/es5-shim/es5-shim.js"></script>
+    <script src="vendor/json3/lib/json3.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+	<script src="vendor/jquery/dist/jquery.js"></script>
+    <script src="vendor/angular/angular.js"></script>
+    <script src="vendor/angular-resource/angular-resource.js"></script>
+    <script src="vendor/angular-cookies/angular-cookies.js"></script>
+    <script src="vendor/angular-sanitize/angular-sanitize.js"></script>
+    <script src="vendor/angular-animate/angular-animate.js"></script>
+    <script src="vendor/angular-touch/angular-touch.js"></script>
+    <script src="vendor/angular-route/angular-route.js"></script>
+    <script src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="vendor/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+	<!-- build:js({.tmp,app}) scripts/scripts.js -->
+
+	<script src="src/app.js"></script>
+	<script src="src/plan/app.js"></script>
+	<script src="src/plan/details/app.js"></script>
+	<script src="src/plan/details/controllers.js"></script>
+	<script src="src/plan/config.js"></script>
+
+	<script src="src/components/app.js"></script>
+	<script src="src/components/confirmation/app.js"></script>
+	<script src="src/components/navigation/app.js"></script>
+
+	<script src="src/components/confirmation/directives.js"></script>
+	<script src="src/components/confirmation/controllers.js"></script>
+
+	<script src="src/config.js"></script>
+	<script src="generated/scripts/templates.js"></script>
+
+	<!-- endbuild -->
+</body>
+</html>
