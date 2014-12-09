@@ -20,16 +20,13 @@ enterprise-angular-app
 |   |   |   app.js
 |   |   |   config.js
 |   |   |   
-|   |   +---module-parent2
-|   |   |   |   app.js
-|   |   |   |   config.js
-|   |   |   |   
-|   |   |   \---module-child1
-|   |   |           app.js
-|   |   |           main.tpl.html
-|   |   |           controllers.js
-|   |   |           directives.js
-|   |   |           config.js
+|   |   +---module1
+|   |   |      app.js
+|   |   |      config.js
+|   |   |      controllers.js
+|   |   |      directives.js
+|   |   |      main.tpl.html
+|   |   |   
 |   |   |           
 |   |   \---module-parent2
 |   |       |   app.js
@@ -39,6 +36,8 @@ enterprise-angular-app
 |   |       |       app.js
 |   |       |       controllers.js
 |   |       |       main.tpl.html
+|   |       |       directives.js
+|   |       |       config.js
 |   |       |       
 |   |       \---module-child2
 |   |              
