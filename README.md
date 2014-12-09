@@ -116,3 +116,10 @@ In a new directory, generate the project:
 **Build Plugins**   : Modularize build files using load-grunt-config
 
 **Development plugins**   : watch, connect, proxy, xxxmin, wiredep and more
+
+###### Modularize structure
+
+###### Example describing how to write custom component
+
+###### Example describing documentation
+
