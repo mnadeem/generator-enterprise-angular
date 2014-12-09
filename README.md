@@ -111,3 +111,8 @@ In a new directory, generate the project:
 ## Features
 
 * Lots of useful plugins incorporated
+Plugin  | Description
+------------- | -------------
+Quality Metrics Plugins  | copy/paste detection using jscpd, Metrics report generation using plato
+Build Plugins  | Content Cell
+Development plugins  | Content Cell
