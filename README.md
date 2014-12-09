@@ -112,6 +112,6 @@ In a new directory, generate the project:
 
 ### Lots of useful plugins incorporated
 
-**Quality Metrics Plugins **:   copy/paste detection using jscpd, Metrics report generation using plato, linting using eslint and coding styling using code painter
+**Quality Metrics Plugins**:   copy/paste detection using jscpd, Metrics report generation using plato, linting using eslint and coding styling using code painter
 **Build Plugins**   : Modularize build files using load-grunt-config
 **Development plugins**   : watch, connect, proxy, *** min, wiredep and more
