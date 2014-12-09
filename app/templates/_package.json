@@ -23,7 +23,7 @@
     "grunt-eslint": "^1.1.0",
     "grunt-filerev": "^0.2.1",
     "grunt-html2js": "^0.2.9",
-    "grunt-jscpd": "0.0.10",
+    "grunt-jscpd": "0.0.11",
     "grunt-karma": "^0.9.0",
     "grunt-newer": "^0.7.0",
     "grunt-ng-annotate": "^0.3.0",
