@@ -116,17 +116,17 @@ In a new directory, generate the project:
 
 ## Features
 
-##### Lots of useful plugins incorporated
+#### Lots of useful plugins incorporated
 
-__Quality Metrics Plugins__:   copy/paste detection using jscpd, Metrics report generation using plato, linting using eslint and coding styling using code painter
+_Quality Metrics Plugins_:   copy/paste detection using jscpd, Metrics report generation using plato, linting using eslint and coding styling using code painter
 
-__Build Plugins__   : Modularize build files using load-grunt-config
+_Build Plugins_   : Modularize build files using load-grunt-config
 
-__Development plugins__   : watch, connect, proxy, xxxmin, wiredep and more
+_Development plugins_   : watch, connect, proxy, xxxmin, wiredep and more
 
-##### Modularize structure
+#### Modularize structure
 
-##### Example describing how to write custom component
+#### Example describing how to write custom component
 
-##### Example describing documentation
+#### Example describing documentation
 
