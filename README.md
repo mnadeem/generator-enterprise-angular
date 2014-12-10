@@ -1,5 +1,12 @@
 # The Enterprise Angular generator 
 
+[![Build Status](https://travis-ci.org/mnadeem/generator-enterprise-angular.svg?branch=master)](https://travis-ci.org/mnadeem/generator-enterprise-angular)
+[![Dependency Status](https://david-dm.org/mnadeem/generator-enterprise-angular.svg)](https://david-dm.org/mnadeem/generator-enterprise-angular)
+[![devDependency Status](https://david-dm.org/mnadeem/generator-enterprise-angular/dev-status.svg)](https://david-dm.org/mnadeem/generator-enterprise-angular#info=devDependencies)
+
+[![NPM](https://nodei.co/npm/generator-enterprise-angular.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/generator-enterprise-angular/)
+[![NPM](https://nodei.co/npm-dl/generator-enterprise-angular.png)](https://nodei.co/npm/generator-enterprise-angular/)
+
 ## Directory Structure
 
 ```
