@@ -10,7 +10,7 @@ module.exports = {
       removeAttributeQuotes: true,
       removeComments: true,
       removeEmptyAttributes: true,
-      removeRedundantAttributes: true,
+      removeRedundantAttributes: false,
       removeScriptTypeAttributes: true,
       removeStyleLinkTypeAttributes: true
     }
