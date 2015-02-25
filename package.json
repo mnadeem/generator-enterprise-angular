@@ -34,7 +34,7 @@
     "app"
   ],
   "dependencies": {
-    "chalk": "^0.5.0",
+    "chalk": "^1.0.0",
     "fs": "0.0.2",
     "yeoman-generator": "^0.18.3",
     "yosay": "^1.0.0"
