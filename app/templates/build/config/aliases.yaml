@@ -33,5 +33,4 @@ default:
   - 'build'
 ci:
   - 'test'
-  - 'jscpd'
   - 'plato'
